@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(155, 183, 187, 0.7), rgba(17, 7, 254, 0.7));
+    transition: 0.5s;
+    overflow: none;
+}
+
+.container {
+    width: 400px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+    z-index: 1000;
+}
+
+.bone{
+    margin: 20px;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .c1, .c2, .c3, .c4{
+    background:#fff;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position:absolute;
+  }
+  .c1{
+    left: 0;
+    top: 0;
+  }
+  .c2{
+    right: 0;
+    top: 0;
+  }
+  .c3{
+    left: 0;
+    bottom: 0;
+  }
+  .c4{
+    bottom: 0;
+    right: 0;
+  }
+  .b1 {
+    background:#fff;
+    height: 30px;
+    width: 120px;
+    position:absolute;  
+    left: 15px;
+    top: 15px;
+  }
+  .b2 {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+.container .login-text,
+.brand {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.container .login-social a {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFF;
+    transition: .3s;
+}
+
+.container .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.container .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    transition: .3s;
+}
+
+.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+    border-color: #a29bfe;
+}
+
+.container .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
+
+.login-register-text {
+    color: #111;
+    font-weight: 600;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+@media (max-width: 430px) {
+    .container {
+        width: 300px;
+    }
+    .container .login-social {
+        display: block;
+    }
+    .container .login-social a {
+        display: block;
+    }
+}
+
+/* create the paw prints */
+.pad {
+  width: 25px;
+  height: 27px;
+  background-color: #654321;
+  -webkit-border-radius: 63px 63px 63px 63px / 108px     108px 72px 72px;
+  border-radius: 50%  50%  50%  50%  / 60%   60%         40%  40%;
+  display: block;
+  position: absolute;
+}       
+.large {
+ width: 70px;
+ height: 80px;
+ transform: rotate(80deg);
+ left: 100px;
+ top: 50px;
+} 
+.small-1 {
+ transform: rotate(50deg);
+ left: 145px;
+ top: 28px;
+}
+.small-2 {
+ transform: rotate(65deg);
+ left: 174px;
+ top: 50px;
+}  
+.small-3 {
+ transform: rotate(98deg);
+ position: absolute;
+ left: 178px;
+ top: 87px;
+}
+.small-4 {
+ transform: rotate(140deg);
+ position: absolute;
+ left: 158px;
+ top: 117px;
+}
+  
+/* position and animate */
+  
+.paw-print-1 {
+opacity: 0;
+position: absolute;
+left: 75px;
+top: 300px;
+transform: rotate(-40deg);
+-webkit-animation: walk 3s linear infinite;
+animation: /*keyframe*/walk /*duration*/3s /*transition*/linear /*repeat*/infinite;
+}
+.paw-print-2 {
+opacity: 0;
+position: absolute;
+left: 275px;
+top: 280px;
+transform: rotate(-5deg); 
+-webkit-animation: walk 3s linear infinite 0.25s;
+animation: walk 3s linear infinite /*delay*/0.25s;
+}
+.paw-print-3 {
+opacity: 0;
+position: absolute;
+left: 375px;
+top: 130px;
+transform: rotate(-10deg); 
+-webkit-animation: walk 3s linear infinite 0.5s;
+animation: walk 3s linear infinite 0.5s;
+}     
+.paw-print-4 {
+opacity: 0;
+position: absolute;
+left: 575px;
+top: 280px;
+transform: rotate(-20deg); 
+-webkit-animation: walk 3s linear infinite 0.75s;
+animation: walk 3s linear infinite 0.75s;
+}    
+.paw-print-5 {
+opacity: 0;
+position: absolute;
+left: 725px;
+top: 50px;
+transform: rotate(10deg); 
+-webkit-animation: walk 3s linear infinite 1s;
+animation: walk 3s linear infinite 1s;
+}   
+.paw-print-6 {
+opacity: 0;
+position: absolute;
+left: 875px;
+top: 200px;
+transform: rotate(10deg); 
+-webkit-animation: walk 3s linear infinite 1.25s;
+animation: walk 3s linear infinite 1.25s;
+}   
+  
+/* walking effect animation keyframes */
+  
+@-webkit-keyframes walk {
+25%  {opacity: 1;}
+100% {opacity: 0;}
+}
+  
+@keyframes walk {
+/* appear */
+25%  {opacity: 1;}
+/* disappear */
+100% {opacity: 0;}
+}
